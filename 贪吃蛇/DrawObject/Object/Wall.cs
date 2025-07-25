@@ -17,7 +17,7 @@ namespace 贪吃蛇.DrawObject
         {
             Console.SetCursorPosition(pos.x, pos.y);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("⬛");
+            Console.WriteLine("墙");
         }
     }
 }
