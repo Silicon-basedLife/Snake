@@ -55,7 +55,7 @@ namespace 贪吃蛇.DrawObject.Draw
             Console.SetCursorPosition(lastBody.pos.x, lastBody.pos.y);
             Console.Write("  ");
 
-            #region Lesson11 身体移动
+
             //在蛇头移动之前 从蛇尾开始 不停的 让后一个的位置 等于前一个的位置
             for (int i = nowNum - 1; i > 0; i--)
             {
