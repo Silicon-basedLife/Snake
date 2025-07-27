@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace 贪吃蛇.Object
+namespace 贪吃蛇.DrawObject
 {
-    internal interface IDraw
+    interface IDraw
     {
+        void Draw();
     }
 }

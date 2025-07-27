@@ -1,44 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using 贪吃蛇.DrawObject.Object;
 using 贪吃蛇.Games;
-using 贪吃蛇.Object;
 
-namespace 贪吃蛇.DrawObject
-{
+
+namespace 贪吃蛇.DrawObject.Draw
+{ 
     class Map : IDraw
     {
-        private Wall[] walls;
+        public Wall[] walls;
 
         public Map()
         {
-            walls = new Wall[Game.w + (Game.h - 3) * 2];
+            walls = new Wall[Game.w + (Game.h - 3)*2];
             int index = 0;
             for (int i = 0; i < Game.w; i+=2)
             {
                 walls[index] = new Wall(i, 0);
-                index++;
+                ++index;
             }
 
-            for (int i = 0; i < Game.w; i += 2 )
+            for (int i = 0; i < Game.w; i+=2)
             {
                 walls[index] = new Wall(i, Game.h - 2);
-                index++;
-            }
-            for (int i = 1; i < Game.h - 2; i ++)
-            {
-                walls[index] = new Wall(0, i);
-                index++;
+                ++index;
             }
 
-            for (int i = 1; i < Game.h - 2; i ++)
+            for (int i = 1; i < Game.h - 2; i++)
+            {
+                walls[index] = new Wall(0, i);
+                ++index;
+            }
+
+            for (int i = 1; i < Game.h - 2; i++)
             {
                 walls[index] = new Wall(Game.w - 2, i);
-                index++;
+                ++index;
             }
         }
+
         public void Draw()
         {
             for (int i = 0; i < walls.Length; i++)

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using 贪吃蛇.Object;
 
-namespace 贪吃蛇.DrawObject
+
+namespace 贪吃蛇.DrawObject.Object
 {
     class Wall : GameObject
     {
@@ -13,11 +11,12 @@ namespace 贪吃蛇.DrawObject
         {
             pos = new Position(x, y);
         }
+
         public override void Draw()
         {
             Console.SetCursorPosition(pos.x, pos.y);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("墙");
+            Console.WriteLine("■");
         }
     }
 }

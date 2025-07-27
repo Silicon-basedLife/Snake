@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using 贪吃蛇.Games;
 
 namespace 贪吃蛇.Scene
@@ -15,7 +13,7 @@ namespace 贪吃蛇.Scene
             strOne = "回到开始界面";
         }
 
-        public override void EnterJDoSomething()
+        public override void EnterJDoSomthing()
         {
             //按J键做什么的逻辑
             if (nowSelIndex == 0)

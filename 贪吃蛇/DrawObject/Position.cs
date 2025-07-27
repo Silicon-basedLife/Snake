@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace 贪吃蛇.Object
+namespace 贪吃蛇.DrawObject
 {
-    internal class Position
+    struct Position
     {
         public int x;
         public int y;
@@ -16,13 +14,12 @@ namespace 贪吃蛇.Object
             this.x = x;
             this.y = y;
         }
-        //贪吃蛇肯定存在位置比较
-        //各个游戏对象比较不重合
-
-        //要配对实现
+        //贪食蛇中 肯定是存在 位置的比较 
+        //各个游戏对象 都会去比较位置是不是重合
+        
         public static bool operator ==(Position p1, Position p2)
         {
-            if (p1.x == p2.x && p1.y == p2.y)
+            if( p1.x == p2.x && p1.y == p2.y)
             {
                 return true;
             }

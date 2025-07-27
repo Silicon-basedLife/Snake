@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace 贪吃蛇.Games
 {
-    internal interface ISceneUpdate
+    
+    /// <summary>
+    /// 场景更新接口
+    /// </summary>
+    interface ISceneUpdate
     {
         void Update();
     }
